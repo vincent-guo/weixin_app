@@ -26,5 +26,8 @@ module WeixinApp
     # config.i18n.default_locale = :de
 
     config.middleware.insert_after ActionDispatch::ParamsParser, ActionDispatch::XmlParamsParser
+
+    # weixin API token
+    config.weixin_token = "ydfugmvx"
   end
 end
