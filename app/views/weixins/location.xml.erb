@@ -3,6 +3,6 @@
     <FromUserName><![CDATA[<%= params[:xml][:ToUserName] %>]]></FromUserName>
     <CreateTime><%= Time.now.to_i %></CreateTime>
     <MsgType><![CDATA[text]]></MsgType>
-    <Content><![CDATA[请点击查询周边商户、团购、优惠：http://boiling-lowlands-9128.herokuapp.com/dianpings/find_businesses?from_user=<%= params[:xml][:FromUserName] %>&to_user=<%= params[:xml][:ToUserName] %>&create_time=<%= params[:xml][:CreateTime] %>&message_type=<%= params[:xml][:MsgType] %>&latitude=<%= params[:xml][:Location_X] %>&longitude=<%= params[:xml][:Location_Y] %>&scale=<%= params[:xml][:Scale] %>&label='<%= params[:xml][:Label] %>'&message_id=<%= params[:xml][:MsgId] %>]]></Content>
+    <Content><![CDATA[请点击查询周边商户、团购、优惠：http://boiling-lowlands-9128.herokuapp.com/dianpings/find_businesses?from_user=<%= params[:xml][:FromUserName] %>&to_user=<%= params[:xml][:ToUserName] %>&create_time=<%= params[:xml][:CreateTime] %>&message_type=<%= params[:xml][:MsgType] %>&latitude=<%= params[:xml][:Location_X] %>&longitude=<%= params[:xml][:Location_Y] %>&scale=<%= params[:xml][:Scale] %>&label=&message_id=<%= params[:xml][:MsgId] %>]]></Content>
 </xml>
 
