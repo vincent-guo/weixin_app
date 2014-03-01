@@ -1,3 +1,5 @@
+require 'net/http'
+
 class DianpingsController < ApplicationController
 
 	def find_businesses
