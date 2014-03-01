@@ -10,7 +10,7 @@ class WeixinsController < ApplicationController
     message_type = params[:xml][:MsgType]
     if message_type == "text"
       render "echo", :formats => :xml
-    elseif message_type == "location"
+    elsif message_type == "location"
       render "location", :formats => :xml
     end
   end
