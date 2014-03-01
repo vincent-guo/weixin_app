@@ -28,6 +28,8 @@ module WeixinApp
     config.middleware.insert_after ActionDispatch::ParamsParser, ActionDispatch::XmlParamsParser
 
     # weixin API token
-    config.weixin_token = "ydfugmvx"
+    config.weixin_token = 'ydfugmvx'
+    config.dianping_appkey = 3870278872
+    config.dianping_secret = 'e1f95b611c544c4bbbccedf204252004'
   end
 end
