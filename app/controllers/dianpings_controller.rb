@@ -1,14 +1,15 @@
 class DianpingsController < ApplicationController
 
 	def find_businesses
-        page = params[:page]
+        page = params[:page] ? params[:page] : 1 
         latitude = params[:latitude]
         longitude = params[:longitude]
 
 		apiUrl = "http://api.dianping.com/v1/business/find_businesses"
 
-		request_params={'category'  =>  '美食',
-				'city'  =>  '上海',
+		request_params={
+                #'category'  =>  '美食',
+				#'city'  =>  '上海',
 				'latitude'  =>  latitude,
 				'longitude'  =>  longitude,
 				'sort'  =>  7,
