@@ -1,4 +1,127 @@
-URL=<%= @url %>
-RESULT=<%= @businesses.count%>
-
-<%= render @businesses %>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+ <head> 
+  <title>
+      点评团购触屏版 -北京团购-大众点评团北京站
+    </title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <meta name="format-detection" content="email=no" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="apple-mobile-web-app-title" content="点评团购触屏版 -北京团购-大众点评团北京站" /> 
+  <meta name="apple-itunes-app" content="app-id=550111418" /> 
+  <link rel="apple-touch-startup-image" size="640x920" href="http://m1.s2.dpfile.com/m/img/app/tuangou/startup4.v42.png" media="(device-height:480px)" /> 
+  <link rel="apple-touch-startup-image" href="http://m1.s2.dpfile.com/m/img/app/tuangou/startup5.v42.png" media="(device-height:568px)" /> 
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://m1.s2.dpfile.com/m/img/app/tuangou/apple-touch-icon-57x57.v42.png" /> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://m1.s2.dpfile.com/m/img/app/tuangou/apple-touch-icon-72x72.v42.png" /> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://m1.s2.dpfile.com/m/img/app/tuangou/apple-touch-icon-114x114.v42.png" /> 
+  <link href="http://m1.s2.dpfile.com/m/css/app/tuangou/t.min.v42.css" rel="stylesheet" type="text/css" /> 
+ </head> 
+ <body> 
+  <div class="J_searchBlock" style="position:absolute; top:0;left:0;width:100%;-webkit-transform: translate(0px, -43px);"> 
+   <header> 
+    <div class="header-box"> 
+     <div class="search-mode"> 
+      <div class="search"> 
+       <form action="/tuan/search" method="post" id="searchForm" autocomplete="off"> 
+        <input type="search" autocomplete="off" autocapitalize="off" autocorrect="off" class="default" placeholder="搜索商户名、类别、商区等" name="keyword" id="J_search_input" /> 
+        <button type="submit" class="search-icon" title="搜索" id="J_search_btn"> </button> 
+       </form> 
+      </div> 
+      <a href="javascript:void(0)" id="J_returnIndex" title="返回" class="noDirect search-cancel"> 返回 </a> 
+     </div> 
+    </div> 
+   </header> 
+   <section class="main"> 
+    <div class="search-list"> 
+     <ul id="J_search_ul"> 
+     </ul> 
+    </div> 
+   </section> 
+  </div> 
+  <header class="slide"> 
+   <a id="J_togglerBar" data-status="off" href="javascript:;" class="noDirect action-bar"> </a> 点评团 • 
+   <a href="/tuan/citylist" onclick="_gaq.push(['_trackEvent', 'home_city', 'click', ''])"> 北京 <b class="drop-down"> </b> </a> 
+   <a id="J_switchBtn" href="javascript:void(0)" class="noDirect search-icon"> </a> 
+  </header> 
+  <section class="main slide"> 
+   <div class="shop-search"> 
+    <ul> 
+     <li> <a href="#"> 首页 </a> </li> 
+     <li> <a href="#"> 商户 </a> </li> 
+     <li> <a href="#"> 团购 </a> </li> 
+     <li> <a href="#"> 优惠 </a> </li> 
+    </ul> 
+   </div> 
+   <div class="index-list"> 
+    <ul id="J_dealList">
+      <%= render @businesses %>
+    </ul> 
+   </div> 
+  </section> 
+  <div class="btn-box slide Fix"> 
+   <a id="J_getMoreDeal" data-cur="1" class="noDirect more-btn Left" title="" href="javascript:;"> <i class="icon-more"> </i> 查看更多 </a> 
+   <a class="noDirect more-btn Right" title="" href="javascript:window.scroll(0, 0);"> <i class="icon-top"> </i> 返回顶部 </a> 
+  </div> 
+  <style type="text/css">
+      .user-lay { -webkit-transform: translate(-250px, 0); }
+    </style> 
+  <div style="height:100%; left:0; " class="user-lay" id="J_navi"> 
+   <div class="hd"> 
+    <div class="search"> 
+     <form autocomplete="off" action="/tuan/search" method="post" id="searchForm"> 
+      <input type="text" autocomplete="off" autocapitalize="off" autocorrect="off" class="default" placeholder="搜索关键词" name="keyword" /> 
+      <button type="submit" class="search-icon" title="搜索" onclick="_gaq.push(['_trackEvent', 'home_search', 'click', ''])"> </button> 
+     </form> 
+    </div> 
+   </div> 
+   <div class="user-operating"> 
+    <ul class="user-list"> 
+     <li> <a href="/tuan/beijing" onclick="_gaq.push(['_trackEvent', 'home_menu', 'click', '全部团购'])"> 全部团购 </a> </li> 
+     <li> <a href="/login?redir=http://m.dianping.com/tuan/beijing" onclick="_gaq.push(['_trackEvent', 'home_menu', 'click', '登录'])"> 登录 </a> </li> 
+     <li> <a href="/reg?redir=http://m.dianping.com/tuan/beijing" onclick="_gaq.push(['_trackEvent', 'home_menu', 'click', '注册'])"> 注册 </a> </li> 
+     <li> <a href="/tuan/receiptlist?st=1" onclick="_gaq.push(['_trackEvent', 'home_menu', 'click', '团购券'])"> 我的团购券 </a> </li> 
+     <li> <a href="/tuan/orderlist" onclick="_gaq.push(['_trackEvent', 'home_menu', 'click', '待付款订单'])"> 待付款订单 </a> </li> 
+     <li> <a href="/tuan/favoritelist" onclick="_gaq.push(['_trackEvent', 'home_menu', 'click', '我的收藏'])"> 团购收藏 </a> </li> 
+     <li> <a href="/tuan/couponlist" onclick="_gaq.push(['_trackEvent', 'home_menu', 'click', '抵用券'])"> 抵用券 </a> </li> 
+     <li> <a href="/tuan/citylist" onclick="_gaq.push(['_trackEvent', 'home_menu', 'click', '切换城市'])"> 切换城市 <span class="tips"> 点评团北京站 <i class="arrow-ent"> </i> </span> </a> </li> 
+     <li> <a href="http://m.dianping.com" onclick="_gaq.push(['_trackEvent', 'home_menu', 'click', '回主站'])"> 大众点评网&middot;首页 </a> </li> 
+    </ul> 
+   </div> 
+  </div> 
+  <script src="http://m1.s2.dpfile.com/m/js/app/tuangou/zepto.min.v42.js" type="text/javascript">
+    </script> 
+  <script src="http://m1.s2.dpfile.com/m/js/app/tuangou/base.min.v42.js" type="text/javascript">
+    </script> 
+  <script type="text/javascript">
+      $(document).ready(function() {
+        DP.cityEnName = "beijing";
+        DP.guidanceParameter = "";
+        DP.app.saveToApp();
+      });
+    </script> 
+  <footer class="footer slide"> 
+   <div class="login"> 
+    <a href="http://m.dianping.com/login" title="" onclick="_gaq.push(['_trackEvent', 'footer_login', 'click', '']);"> 登录 </a> 
+    <a href="http://m.dianping.com/reg" title="" onclick="_gaq.push(['_trackEvent', 'footer_register', 'click', '']);"> 注册 </a> 
+    <span class="city"> <strong> 北京 </strong> <a href="http://m.dianping.com/tuan/citylist" onclick="_gaq.push(['_trackEvent', 'footer_city', 'click', '']);"> 切换城市 </a> </span> 
+   </div> 
+   <div> 
+    <a href="http://m.dianping.com/tuan/beijing" title="" onclick="_gaq.push(['_trackEvent', 'footer_home', 'click', '']);"> 首页 </a> 
+    <em> | </em> 
+    <a href="http://m.dianping.com/tuan/receiptlist" title="" onclick="_gaq.push(['_trackEvent', 'footer_coupon', 'click', '']);"> 我的点评团 </a> 
+    <em> | </em> 
+    <a href="http://wap.dianping.com/tuan/appdownload" title="" onclick="_gaq.push(['_trackEvent', 'footer_app', 'click', '']);"> 客户端 </a> 
+    <em> | </em> 
+    <a href="http://wap.dianping.com/tuan" title="" onclick="_gaq.push(['_trackEvent', 'footer_wap', 'click', '']);"> 标准版 </a> 
+    <em> | </em> 
+    <a href="http://t.dianping.com" title="" onclick="_gaq.push(['_trackEvent', 'footer_web', 'click', '']);"> 电脑版 </a> 
+   </div> 
+   <p> &copy;t.dianping.com <a href="http://m.dianping.com" title=""> 大众点评网 </a> <a style="margin-left:20px;" href="/tuan/feedback"> 意见反馈 </a> </p> 
+  </footer>  
+ </body>
+</html>

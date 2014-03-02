@@ -1,6 +1,30 @@
-<%= image_tag(business.s_photo_url, alt: "s_photo_url") %></br>
-<%= business.name %></br>
-<%= image_tag(business.rating_s_img_url, alt: "rating_s_img_url") %> 人均:<%= business.avg_price %><br>
-地址:<%= business.address %></br>
-是否有团购:<%= business.has_coupon %>  是否有优惠:<%= business.has_deal %>  是否可以在线预订:<%= business.has_online_reservation %>
-</br>-------------------------------------------</br>
+<li>
+    <a href="/tuan/deal/5119921" onclick="_gaq.push(['_trackEvent', 'home_item', 'click', ''])"
+    class="item">
+        <img class="pic-box" width="84" height="60" data-src="<%= business.s_photo_url %>" />
+        <div class="infor deal-tab">
+            <h3 class="title">
+                <%= business.name %>
+            </h3>
+            <div class="price">
+                <span class="now">
+                    人均:<%= business.avg_price %>
+                </span>
+                <span class="old">
+                    
+                </span>
+            </div>
+            <div class="Fix">
+                <span class="num">
+                    团:<%= business.has_coupon %> 惠:<%= business.has_deal %>
+                </span>
+                <span class="dz">
+                    <%= business.address %> 
+                </span>
+                <span class="jl">
+                    <%= business.distance %> 米
+                </span>
+            </div>
+        </div>
+    </a>
+</li>

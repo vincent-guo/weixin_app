@@ -57,6 +57,8 @@ class DianpingsController < ApplicationController
 =end
         end
 
+        render :layout => false
+
 
 
 
