@@ -1,0 +1,18 @@
+<h1>添加新卡</h1>
+当前用户信息:<br>
+openid:<%= @user.openid %><br>
+<br>
+已绑定的卡:<br>
+<% @cards.each do |card| %>
+card_name:<%= card.card_name %><br>
+card_logo:<%= card.card_logo %><br>
+card_intro:<%= card.card_intro %><br>
+card_publisher:<%= card.card_publisher %><br> 
+本卡绑定商家:<%= card.shops.ids %><br>
+<% card.shops.each do |shop| %><%= shop.shop_name %>|<% end %>
+<%= link_to '添加本卡至我的卡包', { action: "added", user_id: params[:user_id], id: card.id }, method: :post %><br> 
+<hr>     
+<% end %>
+<br>
+<br>
+<%= link_to '返回卡包', { action: "show", user_id: params[:user_id] } %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Card name:</strong>
+  <%= @card.card_name %>
+</p>
+
+<p>
+  <strong>Card logo:</strong>
+  <%= @card.card_logo %>
+</p>
+
+<p>
+  <strong>Card publisher:</strong>
+  <%= @card.card_publisher %>
+</p>
+
+<p>
+  <strong>Shops maxcount:</strong>
+  <%= @card.shops_maxcount %>
+</p>
+
+<p>
+  <strong>Card intro:</strong>
+  <%= @card.card_intro %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @card.website %>
+</p>
+
+<p>
+  <strong>Create time:</strong>
+  <%= @card.create_time %>
+</p>
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>

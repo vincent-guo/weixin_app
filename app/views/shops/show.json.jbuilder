@@ -1,0 +1,1 @@
+json.extract! @shop, :id, :shop_name, :shop_logo, :phone, :category, :province, :city, :district, :address, :lat, :lng, :website, :card_type, :business_id, :last_update_time, :create_time, :created_at, :updated_at

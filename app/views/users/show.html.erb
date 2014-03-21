@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subscribe:</strong>
+  <%= @user.subscribe %>
+</p>
+
+<p>
+  <strong>Openid:</strong>
+  <%= @user.openid %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @user.nickname %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @user.sex %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @user.language %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>Province:</strong>
+  <%= @user.province %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @user.country %>
+</p>
+
+<p>
+  <strong>Headimgurl:</strong>
+  <%= @user.headimgurl %>
+</p>
+
+<p>
+  <strong>Subscribe time:</strong>
+  <%= @user.subscribe_time %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

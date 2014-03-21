@@ -1,0 +1,39 @@
+<h1>Listing cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Card name</th>
+      <th>Card logo</th>
+      <th>Card publisher</th>
+      <th>Shops maxcount</th>
+      <th>Card intro</th>
+      <th>Website</th>
+      <th>Create time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.card_name %></td>
+        <td><%= card.card_logo %></td>
+        <td><%= card.card_publisher %></td>
+        <td><%= card.shops_maxcount %></td>
+        <td><%= card.card_intro %></td>
+        <td><%= card.website %></td>
+        <td><%= card.create_time %></td>
+        <td><%= link_to 'Show', card %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Card', new_card_path %>
